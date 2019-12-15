@@ -1,9 +1,6 @@
 import qrcode
 import csv
 
-
-
-
 def read_sheet_names():
     names_index =1
     names = []
