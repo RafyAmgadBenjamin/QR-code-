@@ -5,8 +5,8 @@ import datetime
 # English names col in original sheet
 original_names_index = 1
 # TODO Need to get the last week in dynamic way.
-original_new_week_name = "Week 3"
-original_new_time_name = "Time 3"
+original_new_week_name = "Week 4"
+original_new_time_name = "Time 4"
 session_start_time = "19:49:47"
 
 new_attendance_names = []
@@ -39,15 +39,15 @@ def read_original_sheet_panda(new_attendance_time):
         )
         if index_attendee != -1:
             # adding present attendace
-            data.loc[index, original_new_week_name] = 1
+            data.loc[index, original_new_week_name] = "\u2713"
             # adding late time
             data.loc[index, original_new_time_name] = new_attendance_time[
                 index_attendee
             ]
         else:
             # adding absent attendace
-            data.loc[index, original_new_week_name] = 0
-            data.loc[index, original_new_time_name] = "*"
+            data.loc[index, original_new_week_name] = "\u2715"
+            data.loc[index, original_new_time_name] = "\u2715"
     return data
 
 
