@@ -5,8 +5,9 @@ import datetime
 # English names col in original sheet
 original_names_index = 1
 # TODO Need to get the last week in dynamic way.
-original_new_week_name = "Week 4"
-original_new_time_name = "Time 4"
+original_new_week_name = "Week 1"
+original_new_time_name = "Time 1"
+# The time here is 24 hours formatted example "19:49:47"
 session_start_time = "19:49:47"
 
 new_attendance_names = []
