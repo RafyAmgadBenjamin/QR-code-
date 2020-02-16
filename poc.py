@@ -5,10 +5,10 @@ import datetime
 # English names col in original sheet
 original_names_index = 1
 # TODO Need to get the last week in dynamic way.
-original_new_week_name = "Week 1"
-original_new_time_name = "Time 1"
-# The time here is 24 hours formatted example "19:49:47"
-session_start_time = "19:49:47"
+original_new_week_name = "Week 2"
+original_new_time_name = "Time 2"
+# The time here is 24 hours formatted example "17:49:47"
+session_start_time = "17:50:00"
 
 new_attendance_names = []
 data = None
@@ -23,7 +23,7 @@ def cal_late_time(base_time, attendee_time):
     attendee_hour = attendee_time_only.hour
     base_time_min = base_time_only.minute
     base_time_hour = base_time_only.hour
-    if base_time_min <= attendee_min and base_time_hour <= attendee_hour:
+    if base_time_min < attendee_min or base_time_hour < attendee_hour:
         diff_min = attendee_min - base_time_min
         diff_hour = attendee_hour - base_time_hour
     else:
