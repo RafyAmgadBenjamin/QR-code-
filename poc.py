@@ -23,7 +23,9 @@ def cal_late_time(base_time, attendee_time):
     attendee_hour = attendee_time_only.hour
     base_time_min = base_time_only.minute
     base_time_hour = base_time_only.hour
-    if base_time_min < attendee_min or base_time_hour < attendee_hour:
+    if (base_time_min < attendee_min and base_time_hour == attendee_hour) or (
+        base_time_hour < attendee_hour
+    ):
         diff_min = attendee_min - base_time_min
         diff_hour = attendee_hour - base_time_hour
     else:
